@@ -1,6 +1,6 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
-
+const fortune = require('./lib/fortune')
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,21 +19,13 @@ app.set('view engine', 'handlebars');
 app.get('/', (req, res) => res.render('home'));
 
 
-// Conteúdo dinâmico para a view About
-const fortunes = [
-  "Conquer your fears or they will conquer you.",
-  "Rivers need springs.",
-  "Do not fear what you don't know.",
-  "You will have a pleasant surprise.",
-  "Whenever possible, keep it simple.",
-];
+
 
 // página About
 // O mét app desconsidera case, / e a querystring
 // código 200 é default no Express
 app.get('/about', (req, res) => {
-  const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-  res.render('about', { fortune: randomFortune });
+  res.render('about', { fortune: fortune.getFortune() });
 });
 
 // página 404 personalizada
@@ -51,5 +43,5 @@ app.use((err, req, res, next) => {
 
 
 app.listen(port, () => console.log(
-  `Express started on http://localhost:${port}; ` + `press Ctrl-C to terminate...`
+  `Express started on http://localhost:${port}; ` + `press Ctrl+C to terminate...`
 ));
