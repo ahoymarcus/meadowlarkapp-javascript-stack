@@ -10,3 +10,5 @@ Dependências:
 - Puppeteer para testes de Integração
 - Portfinder como dependência para a aplicação ser capaz de achar portas abertas para se comunicar
 - ESLint
+- Body-parser para analizar o corpo de requisições
+- CSS Bootstrap

@@ -1,5 +1,6 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
+const bodyParser = require('body-parser');
 
 const handlers = require('./lib/handlers')
 const weatherMiddleware = require('./lib/middleware/weather');
@@ -7,7 +8,9 @@ const weatherMiddleware = require('./lib/middleware/weather');
 const app = express();
 const port = process.env.PORT || 3000;
 
+
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Para o uso de Partials dentro de Views
 app.use(weatherMiddleware);
@@ -22,6 +25,12 @@ app.set('view engine', 'handlebars');
 // O mét app desconsidera case, / e a querystring
 // código 200 é default no Express
 app.get('/', handlers.home);
+
+
+// handlers for browser-based form submission
+app.get('/newsletter-signup', handlers.newsletterSingup);
+app.post('/newsletter-singup/process', handlers.newsletterSignupProcess);
+app.get('/newsletter-signup/thank-you', handlers.newsletterSignupThankYou);
 
 
 // página About
