@@ -2,11 +2,15 @@ const express = require('express');
 const expressHandlebars = require('express-handlebars');
 
 const handlers = require('./lib/handlers')
+const weatherMiddleware = require('./lib/middleware/weather');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
+
+// Para o uso de Partials dentro de Views
+app.use(weatherMiddleware);
 
 // configurando a View engine Handlebars
 app.engine('handlebars', expressHandlebars({
