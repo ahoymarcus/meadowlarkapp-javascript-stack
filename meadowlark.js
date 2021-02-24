@@ -2,7 +2,10 @@ const express = require('express');
 const expressHandlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const multiparty = require('multiparty');
+const cookieParser = require('cookie-parser');
+const expressSession = require('express-session');
 
+//const { credentials } = require('./config');
 const handlers = require('./lib/handlers');
 const weatherMiddlware = require('./lib/middleware/weather');
 
@@ -23,6 +26,16 @@ app.set('view engine', 'handlebars');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+//app.use(cookieParser(credentials.cookieSecret));
+// Certifique-se de conectar o middleware de cookieSecret
+// antes deste middleware de sessões!
+// app.use(expressSession({
+//   resave: false,
+//   saveUninitialized: false,
+//   secret: creditials.cookieSecret,
+// }));
+
 
 const port = process.env.PORT || 3000;
 
