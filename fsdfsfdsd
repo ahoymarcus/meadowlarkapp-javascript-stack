@@ -1,0 +1,65 @@
+[33mcommit 7c0e95bd6bb4d3d999c6676299d721a02bab2668[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Marcus Vinícius da Silveira richa <marcus.richa@sempreceub.com>
+Date:   Tue Feb 23 21:03:36 2021 -0300
+
+    Inserir dependência multiparty para upload de arquivos. Criar o formulário para requisição com o método action de HTML. Criar a rota no arquivo de entrypoint e Definir o seu handler respectivo, tudo isso com os recursos para o redirecionamento final de sucesso para a requisição.
+
+[33mcommit 5dbef2ef4366d0e998f7dd337438586e63f25e1d[m
+Author: Marcus Vinícius da Silveira richa <marcus.richa@sempreceub.com>
+Date:   Tue Feb 23 19:57:51 2021 -0300
+
+    Corrigir requisição HTML. Inserir requisição com FETCH-JSON. Inserir uma rota específica com formulário para ser carregado com JSON. Inserir a rota no arquivo de entry-point e inserir os handlers para análise da requisição JSON.
+
+[33mcommit 1a81af62893e913d98d313c7a4b729496a831a16[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Marcus Vinícius da Silveira richa <marcus.richa@sempreceub.com>
+Date:   Tue Feb 23 00:31:22 2021 -0300
+
+    Inserir dependência body-parser. Criar rota newsletter-signup e formulário html. Configurar o processamento do formulário em handlers.js e inserir as novas rotas no entry-point da aplicação.
+
+[33mcommit f3f6ed20a1bb35adc466f4c32bc3cdfde6990faa[m
+Author: Marcus Vinícius da Silveira richa <marcus.richa@sempreceub.com>
+Date:   Mon Feb 22 22:47:04 2021 -0300
+
+    Configurar Layouts parciais com express-Handlebars. Inserir uma pasta Partials em Views e o arquivo de layout-parcial, e inserir uma pasta Middleware em Lib e com um Mock de dados metereológicos.
+
+[33mcommit 2d16772dfce0164022fa170d69a8504925e0058e[m
+Author: Marcus Vinícius da Silveira richa <marcus.richa@sempreceub.com>
+Date:   Sun Feb 21 00:19:24 2021 -0300
+
+    Incluir dependência Eslint.
+
+[33mcommit 0835417bae2084f72046722ec30be1a6ecfe93fa[m
+Author: Marcus Vinícius da Silveira richa <marcus.richa@sempreceub.com>
+Date:   Sat Feb 20 20:40:16 2021 -0300
+
+    Inserir dependências Portfinder, e Puppeteer para testes de integração. Criar diretório integration-tests e um arquivo de teste. Inserir um link de rota na página home para testar interatividade.
+
+[33mcommit 506a4d365be8c2f862dbb6c1755967a2f245b3b9[m
+Author: Marcus Vinícius da Silveira Richa <marcus.richa@sempreceub.com>
+Date:   Sat Feb 20 01:03:00 2021 -0300
+
+    Inserir dependência Jest. Inserir arquivo de handlers para rotas e uma pasta com testes para handlers
+
+[33mcommit 04ff00df5bd050e1277e4b299130b70d283eb3f7[m
+Author: Marcus Vinícius da Silveira Richa <marcus.richa@sempreceub.com>
+Date:   Fri Feb 19 22:48:30 2021 -0300
+
+    Movido o objeto 'music sheet' para um módulo separado
+
+[33mcommit 2d2f15b47efeacef9600d6b2c124eaf828a02ac8[m
+Author: Marcus Vinícius da Silveira Richa <marcus.richa@sempreceub.com>
+Date:   Fri Feb 19 19:43:36 2021 -0300
+
+    Inserir dependência express-handlebars e pasta Views e Layouts. Criar pasta public com imagem do logo da empresa e usar com o Middelware static. Criar primerio conteúdo dinâmico na view About.
+
+[33mcommit 3934628d4121c24d3590e0c8525a34ae334dd0a1[m
+Author: Marcus Vinícius da Silveira Richa <marcus.richa@sempreceub.com>
+Date:   Fri Feb 19 01:22:39 2021 -0300
+
+    Inserir arquivo README.md
+
+[33mcommit f63a6531607b047df002e84f4e7b42c50f823d19[m
+Author: Marcus Vinícius da Silveira Richa <marcus.richa@sempreceub.com>
+Date:   Fri Feb 19 01:16:22 2021 -0300
+
+    Iniciar projeto do livro. Instalar dependência Express. Criar rotas básicas de Home, About e 404.

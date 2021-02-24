@@ -55,12 +55,28 @@ app.get('/contest/vacation-photo', handlers.vacationPhotoContest);
 app.post('/contest/vacation-photo/:year/:month', (req, res) => {
   const form = new multiparty.Form();
   form.parse(req, (err, fields, files) => {
-    if (err) return res.status(500).send({ error: err.message });
-
+    if (err) return handlers.vacationPhotoContestProcessError(req, res, err.message);
+    console.log('got fields: ', fields);
+    console.log('and files: ', files);
     handlers.vacationPhotoContestProcess(req, res, fields, files);
   });
 });
+
+app.get('/contest/vacation-photo-ajax', handlers.vacationPhotoContestAjax);
+app.post('/api/vacation-photo-process-ajax/:year/:month', (req, res) => {
+  const form = new Multiparty.Form();
+  form.parse(req, (err, fields, files) => {
+    if (err) {
+      return handlers.api.vacationPhotoAjaxError(req, res, err, message);
+    }
+    handlers.api.vacationPhotoAjax(req, res, fields, files);
+  });
+});
+
 app.get('/contest/vacation-photo-thank-you', handlers.vacationPhotoContestProcessThankYou);
+
+
+
 
 
 // app.get('/contest/vacation-photo', handlers.vacationPhotoContest)
