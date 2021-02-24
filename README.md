@@ -12,7 +12,7 @@ Dependências:
 - ESLint
 - CSS Bootstrap
 - Body-parser para analizar o corpo de requisições. [^1]
-
+- Multiparty para o parseamento de requisições relacionadas ao upload de arquivos.
 
 
 [^1]: Estaremos testando no projeto o parser de requisições de duas maneiras diferentes, sendo a primeira a partir do tradicional atributo 'action' do HTML, e a segundo no estilo front-end usando preventDefault para enviar a requisão por meio de JSON.
