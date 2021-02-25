@@ -7,18 +7,19 @@ Dependências:
 - Express
 - Handlebars (view engine)
 - Jest para testes unitários
-- Puppeteer para testes de Integração
+- Puppeteer para testes de Integração [^1]
 - Portfinder como dependência para a aplicação ser capaz de achar portas abertas para se comunicar
-- Body-parser para analizar o corpo de requisições. [^1]
-- ESLint [^2]
-- CSS Bootstrap [^2]
+- Body-parser para analizar o corpo de requisições. [^2]
+- ESLint [^1]
+- CSS Bootstrap [^1]
 - Multiparty para o parseamento de requisições relacionadas ao upload de arquivos.
-- Cookie-parser. [^2]
-- Express-session. [^2]
-- Nodemailer [^2]
+- Cookie-parser. [^1]
+- Express-session. [^1]
+- Nodemailer [^1]
 - Morgan: criação de ambientes diferenciados de Log para o projeto. Em console para ambiente de Desenvolvimento e em arquivo separado para ambiente de Produção.
 - Forever: para gerenciamento de processos em Node-JS.
+- Artillery
 
 
-[^1]: Estaremos testando no projeto o parser de requisições de duas maneiras diferentes, sendo a primeira a partir do tradicional atributo 'action' do HTML, e a segundo no estilo front-end usando preventDefault para enviar a requisão por meio de JSON.
-[^2]: Essas dependências acabaram não sendo utilizadas no projeto final.
+[^1]: Essas dependências acabaram não sendo utilizadas no projeto final.
+[^2]: Estaremos testando no projeto o parser de requisições de duas maneiras diferentes, sendo a primeira a partir do tradicional atributo 'action' do HTML, e a segundo no estilo front-end usando preventDefault para enviar a requisão por meio de JSON.

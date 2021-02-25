@@ -4,7 +4,8 @@
   "description": "Site da Meadowlark Travel",
   "main": "meadowlark.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "stress": "artillery quick --count 10 -n 20 http://localhost:3000/"
   },
   "author": "",
   "license": "ISC",
