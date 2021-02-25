@@ -16,7 +16,8 @@ Dependências:
 - Cookie-parser. [^2]
 - Express-session. [^2]
 - Nodemailer [^2]
-- Morgan
+- Morgan: criação de ambientes diferenciados de Log para o projeto. Em console para ambiente de Desenvolvimento e em arquivo separado para ambiente de Produção.
+- Forever: para gerenciamento de processos em Node-JS.
 
 
 [^1]: Estaremos testando no projeto o parser de requisições de duas maneiras diferentes, sendo a primeira a partir do tradicional atributo 'action' do HTML, e a segundo no estilo front-end usando preventDefault para enviar a requisão por meio de JSON.

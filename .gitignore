@@ -3,6 +3,8 @@ node_modules
 
 .credentials.*
 
+*.log
+
 # arquivos de backup (alcança também arquivos nos subdiretórios)
 *~
 *.bak
