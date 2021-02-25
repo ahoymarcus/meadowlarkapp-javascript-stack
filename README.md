@@ -16,6 +16,7 @@ Dependências:
 - Cookie-parser. [^2]
 - Express-session. [^2]
 - Nodemailer [^2]
+- Morgan
 
 
 [^1]: Estaremos testando no projeto o parser de requisições de duas maneiras diferentes, sendo a primeira a partir do tradicional atributo 'action' do HTML, e a segundo no estilo front-end usando preventDefault para enviar a requisão por meio de JSON.
