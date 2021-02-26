@@ -51,6 +51,8 @@ app.use(weatherMiddlware);
 // código 200 é default no Express
 app.get('/', handlers.home);
 
+app.get('/vacations', handlers.listVacations);
+
 
 // handlers for browser-based form submission
 app.get('/newsletter-signup', handlers.newsletterSignup);
@@ -60,8 +62,6 @@ app.get('/newsletter-signup/thank-you', handlers.newsletterSignupThankYou);
 // handlers for fetch/JSON form submission
 app.get('/newsletter', handlers.newsletter);
 app.post('/api/newsletter-signup', handlers.api.newsletterSignup);
-
-
 
 // vacation photo contest
 app.get('/contest/vacation-photo', handlers.vacationPhotoContest);
