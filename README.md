@@ -19,6 +19,7 @@ Dependências:
 - Morgan: criação de ambientes diferenciados de Log para o projeto. Em console para ambiente de Desenvolvimento e em arquivo separado para ambiente de Produção.
 - Forever: para gerenciamento de processos em Node-JS.
 - Artillery
+- Mongoose - mapeador objeto-documento do MongoDB.
 
 
 [^1]: Essas dependências acabaram não sendo utilizadas no projeto final.
