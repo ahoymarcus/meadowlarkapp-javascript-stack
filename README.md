@@ -20,6 +20,7 @@ Dependências:
 - Forever: para gerenciamento de processos em Node-JS.
 - Artillery
 - Mongoose - mapeador objeto-documento do MongoDB.
+- PG - o cliente do banco de dados Postgres
 
 
 [^1]: Essas dependências acabaram não sendo utilizadas no projeto final.
