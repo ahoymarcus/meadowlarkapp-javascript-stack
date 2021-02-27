@@ -21,6 +21,7 @@ Dependências:
 - Artillery
 - Mongoose - mapeador objeto-documento do MongoDB.
 - PG - o cliente do banco de dados Postgres
+- Lodash - biblioteca utilitária node-js
 
 
 [^1]: Essas dependências acabaram não sendo utilizadas no projeto final.
