@@ -22,6 +22,8 @@ Dependências:
 - Mongoose - mapeador objeto-documento do MongoDB.
 - PG - o cliente do banco de dados Postgres
 - Lodash - biblioteca utilitária node-js
+- Cors - biblioteca ligada à requisições HTTP entre sites
+- Node-fetch @2.6.0
 
 
 [^1]: Essas dependências acabaram não sendo utilizadas no projeto final.

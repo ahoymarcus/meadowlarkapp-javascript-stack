@@ -18,7 +18,7 @@ afterEach(() => {
 
 
 test('home page links to about page', async () => {
-  const browser = await puppeteer.lauch();
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   await page.goto('http://localhost:${port}');

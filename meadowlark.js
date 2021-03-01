@@ -9,7 +9,11 @@ const expressSession = require('express-session');
 const handlers = require('./lib/handlers');
 const weatherMiddlware = require('./lib/middleware/weather');
 
+const cors = require('cors');
+
 const app = express();
+
+app.use('/api', cors());
 
 // configure Handlebars view engine
 app.engine('handlebars', expressHandlebars({
@@ -87,6 +91,15 @@ app.post('/api/vacation-photo-process-ajax/:year/:month', (req, res) => {
 });
 
 app.get('/contest/vacation-photo-thank-you', handlers.vacationPhotoContestProcessThankYou);
+
+
+// rotas dos testes da API do site
+app.get('/api/vacations', handlers.getVacationApi);
+app.get('/api/vacation/:sku', handlers.getVacationBySkuApi);
+app.post('/api/vacation/:sku/notify-when-in-season', handlers.addVacationInSeasonListernerApi);
+app.delete('/api/vation/:sku', handlers.requestDeleteVacationApi);
+
+
 
 
 
